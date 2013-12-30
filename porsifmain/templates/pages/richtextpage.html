@@ -1,0 +1,20 @@
+{% overextends "pages/richtextpage.html" %}
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
+
+
+{% block main %}
+{% editable page.title %}<h1 class="posttitle">{{ page.title }}</h1>{% endeditable %}
+
+{{ block.super }}
+
+        <footer class="post-footer postdata fix">
+        {% with page.user as author %}
+
+        <span class="author"><span class="icon">&nbsp;</span>Publisert av <span class="vcard">
+            <a href="{% url 'blog_post_list_author' author %}"
+                class="url fn" rel="author">{{ author.get_full_name|default:author.username }}
+            </a>
+        </span> kl {{blog_post.publish_date|date:'H:i'}}</span>
+        {%endwith%}
+        </footer><!-- .post-footer -->
+{% endblock %}

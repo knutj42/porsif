@@ -1,0 +1,59 @@
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <article class="post">
+        <header class="post-header title-container fix">
+            <div>
+
+                <div class="date">
+                    <span class="month">{% blocktrans with monthname=blog_post.publish_date|date:'b'%}{{monthname}}{% endblocktrans %}</span>
+                    <span class="day">{{blog_post.publish_date|date:'d'}}</span>
+                    <span class="year">{{blog_post.publish_date.year}}</span></div>
+                <div class="title">
+                    {% editable blog_post.title %}
+                    <h2 class="posttitle"><a href="{{ blog_post.get_absolute_url }}" class="entry-title" rel="bookmark" title="{{ blog_post.title }}">{{ blog_post.title }}</a></h2>
+                    {% endeditable %}
+
+                    <div class="postdata fix">
+                        {% with blog_post.categories.all as categories %}
+                            {% if categories %}
+                                 <span class="category">
+                                {% for category in categories %}
+                                         <a href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a>{% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                                 </span>
+                            {% endif %}
+                        {% endwith %}
+
+                    </div><!-- /.postdata -->
+                </div><!-- /.title -->
+            </div>
+            <div clear="both"></div>
+         </header><!-- /.title-container -->
+        <div class="entry-container fix">
+            <div class="entry entry-content fix">
+                {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
+                <a href="{{ blog_post.get_absolute_url }}">
+                    <img class="img-thumbnail pull-left" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 90 90 %}">
+                </a>
+                {% endif %}
+                {% editable blog_post.content %}
+                {{ blog_post.content|richtext_filters|safe }}
+                {% endeditable %}
+            </div><!--entry -->
+        </div><!-- .entry-container -->
+        <footer class="post-footer postdata fix">
+        {% with blog_post.user as author %}
+        <span class="author"><span class="icon">&nbsp;</span>Publisert av <span class="vcard">
+            <a href="{% url 'blog_post_list_author' author %}"
+                class="url fn" rel="author">{{ author.get_full_name|default:author.username }}
+            </a>
+        </span> kl {{blog_post.publish_date|date:'H:i'}}</span>
+        {%endwith%}
+        </footer><!-- .post-footer -->
+        </article>
+
+
+    </div>
+</div>

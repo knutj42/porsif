@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
+
+
+
+{% block main_outer %}
+{% blog_recent_posts as blog_posts %}
+{% for blog_post in blog_posts %}
+    {% include "pors/blog_entry.html" %}
+
+{% endfor %}
+
+{% pagination_for blog_posts %}
+
+{% endblock %}

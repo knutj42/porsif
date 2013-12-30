@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-01 14:47+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+
+# Placeholderen i søkeboksen
+msgid "Searchtext"
+msgstr "Søketekst"
+
+msgid "dec"
+msgstr "des"
+
+msgid "Viewing posts for the category"
+msgstr "Viser innlegg for kategorien"
+
+msgid "Viewing posts by"
+msgstr "Viser innlegg skrevet av"
+
+msgid "Recent Posts"
+msgstr "Siste innlegg"
+
+msgid "Archive"
+msgstr "Arkiv"
+
+msgid "Categories"
+msgstr "Kategorier"
+
+msgid "Authors"
+msgstr "Forfattere"
+
+msgid "Share on Facebook"
+msgstr "Del på Facebook"
+
+msgid "Share on Twitter"
+msgstr "Del på Twitter"
+
+msgid "New Comment"
+msgstr "Ny kommentar"
+
+msgid "Name"
+msgstr "Navn"
+
+msgid "Email"
+msgstr "Epost"
+
+msgid "Website"
+msgstr "Nettsted"
+
+msgid "Comment"
+msgstr "Kommentar"
+
+msgid "Comments"
+msgstr "Kommentarer"
+
+msgid "required (not published)"
+msgstr "må fylles ut (blir ikke publisert)"
+
+msgid "required"
+msgstr "må fylles ut"
+
+msgid "optional"
+msgstr "valgfritt felt"
+
+msgid "There are currently no comments"
+msgstr "Ingen kommentarer"
+
+
+
