@@ -216,6 +216,18 @@ MEDIA_URL = STATIC_URL + "media/"
 # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
 
+FILEBROWSER_EXTENSIONS = {
+    'Folder': [''],
+    'Image': ['.jpg','.jpeg','.gif','.png','.tif','.tiff'],
+    'Video': ['.mov','.wmv','.mpeg','.mpg','.avi','.rm'],
+    'Document': ['.pdf','.doc','.docx','.rtf','.txt','.xls','.xlsx','.csv'],
+    'Audio': ['.mp3','.mp4','.wav','.aiff','.midi','.m4p', '.ogg'],
+    'Code': ['.html','.py','.js','.css']
+}
+
+
+
+
 # Package/module name to import the root urlpatterns from for the project.
 ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 
